@@ -56,3 +56,20 @@ If the certificate encounter some problem when opening the browser, it means tha
 explorer.exe `wslpath -w $HOME/.symfony5/certs`
 ```
 Then click on the "default" file and follow the steps. There isn't a password, let the field empty. Oh... yeah, you must restart Windows.
+
+
+# Controller and views.
+
+Generally, you're gonna use Symfony for two types of projects:
+- **API projects**, no front but you'll send data to those who ask them.
+- **MVC projects**, you'll manage the front and the back in the same project.
+
+## MVC Project : front + back in Symfony
+In case you want to create an MVC project as simple as possible, you could use **twig** which is *similar to Razor for ASP.NET*.
+
+I'd recommend checking the following tutorial: [twig for Symfony](https://symfonycasts.com/screencast/symfony/twig).
+
+How to install ?
+```shell
+composer require twig
+```
