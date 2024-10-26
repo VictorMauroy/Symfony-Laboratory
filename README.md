@@ -73,3 +73,21 @@ How to install ?
 ```shell
 composer require twig
 ```
+
+
+## Debugging
+
+To use the debug tools, you'll have to run the following command:
+```shell
+./bin/console <your_command>
+```
+
+The list of possible "commands" that you can use can be retrieved by typing `./bin/console` or `php bin/console`.
+
+### The profiler
+If you want to use a profiler, there is one which is in the basics packages of Symfony. However, you still need to install it.
+```shell
+composer require debug
+```
+It will install various useful tools for debugging, including a special profiler. 
+<br> WARNING: It seems that it **only works with twig**
