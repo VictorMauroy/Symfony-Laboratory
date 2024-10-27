@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\Client;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -10,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class ClientApiController extends AbstractController
 {
     #[Route('/api/clients')]
-    public function getCollection() : Response
+    public function getCollection(LoggerInterface $loggerInterface) : Response
     {
         # Lazy way to define clients.
         /* $clients = [
@@ -30,6 +31,8 @@ class ClientApiController extends AbstractController
                 'email' => 'sullysea@zmail.fr'
             ],
         ]; */
+
+        # dd($loggerInterface); // Add a special interface for debugging in the browser.
 
         $clients = [
             new Client(

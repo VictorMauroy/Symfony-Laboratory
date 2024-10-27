@@ -91,6 +91,8 @@ composer require debug
 ```
 It will install various useful tools for debugging, including a special profiler.
 
+You can also access the profiter by add `_profiler` after the port number in your request.
+
 ## Working on a API
 
 In order to encode objects into json, you will need a serializer (json_encode won't work because of private properties). Yet, you could also remove the properties from private to public...
