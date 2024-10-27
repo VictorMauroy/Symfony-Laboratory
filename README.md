@@ -58,7 +58,7 @@ explorer.exe `wslpath -w $HOME/.symfony5/certs`
 Then click on the "default" file and follow the steps. There isn't a password, let the field empty. Oh... yeah, you must restart Windows.
 
 
-# Controller and views.
+## Controller and views.
 
 Generally, you're gonna use Symfony for two types of projects:
 - **API projects**, no front but you'll send data to those who ask them.
@@ -89,5 +89,14 @@ If you want to use a profiler, there is one which is in the basics packages of S
 ```shell
 composer require debug
 ```
-It will install various useful tools for debugging, including a special profiler. 
-<br> WARNING: It seems that it **only works with twig**
+It will install various useful tools for debugging, including a special profiler.
+
+## Working on a API
+
+In order to encode objects into json, you will need a serializer (json_encode won't work because of private properties). Yet, you could also remove the properties from private to public...
+
+To install a serializer:
+```shell
+composer require serializer
+```
+Then Symfony will automaticaly detect that you are using a serialiser and the previous methods will work.
