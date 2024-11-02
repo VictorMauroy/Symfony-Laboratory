@@ -1,0 +1,33 @@
+{% block body %}
+<div>
+    <h1>Our best clients</h1>
+    <p>Do you think it's bad to tell who they are like that ?</p>
+</div>
+
+<div>
+    <table>
+        {% for client in clients %}
+            <tr>
+                <th>Name</th>
+                <td>{{ client.name }}</td>
+            </tr>
+        
+            <tr>
+                <th>First Name</th>
+                <td>{{ client.firstName }}</td>
+            </tr>
+        
+            <tr>
+                <th>Mail</th>
+                <td>{{ client.email }}</td>
+            </tr>
+        
+        {% else %}
+            <h2>ERROR : Couldn't find any client.</h2>
+
+        {% endfor %}
+    </table>
+
+    <p>Total count of best clients: {{ count }}</p>
+</div>
+{% endblock %}
